@@ -39,6 +39,13 @@
                "value":"[#${executionData.id}](${executionData.href})",
                "short":true
             }
+<#if (executionData.argstring)?has_content>
+            ,{
+               "title":"Arguments",
+               "value":"${executionData.argstring}",
+               "short":true
+            }
+</#if>
 <#if trigger == "failure">
             ,{
                "title":"Failed Nodes",
